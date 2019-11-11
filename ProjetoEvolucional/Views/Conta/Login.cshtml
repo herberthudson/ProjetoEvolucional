@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>ViewBag.Title</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Login">Login:</label>
+        <input type="text" asp-for="Login" class="form-control" autofocus />
+        <small class="is-invalid">
+            <span asp-validation-for="Login"></span>
+        </small>
+    </div>
+
+    <div class="form-group">
+        <label for="Senha">Senha:</label>
+        <input type="password" asp-for="Senha" class="form-control" />
+        <small class="is-invalid">
+            <span asp-validation-for="Senha"></span>
+        </small>
+    </div>
+
+    <button class="btn btn-primary">Entrar</button>
+
+</form>

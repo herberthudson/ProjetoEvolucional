@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ProjetoEvolucional.Data;
 
 namespace ProjetoEvolucional.Controllers
 {
+    [Authorize]
+
     public class HelloController: Controller
     {
 

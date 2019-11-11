@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace ProjetoEvolucional.Data
 {
@@ -11,6 +7,18 @@ namespace ProjetoEvolucional.Data
         public static void Init(ProjetoEvolucionalDataContext context)
         {
             context.Database.EnsureCreated();
+
+            if (!context.Usuarios.Any())
+            {
+                context.Usuarios.Add(new Models.Usuario
+                {
+                    Nome = "Candidato Evolucional",
+                    Login = "candidato-evolucional",
+                    Senha = "123456"
+                });
+
+                context.SaveChanges();
+            }
         }
     }
 }

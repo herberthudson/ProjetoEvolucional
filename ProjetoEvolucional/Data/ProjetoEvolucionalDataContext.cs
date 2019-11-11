@@ -23,5 +23,7 @@ namespace ProjetoEvolucional.Data
         public DbSet<Avaliacao> Avalicaoes { get; set; }
 
         public DbSet<Disciplina> Disciplinas { get; set; }
+
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }
