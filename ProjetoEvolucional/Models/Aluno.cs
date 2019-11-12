@@ -12,6 +12,8 @@ namespace ProjetoEvolucional.Models
         [Required]
         public string Nome { get; set; }
 
+        public decimal Media { get; set; }
+
         public IList<Avaliacao> Notas { get; set; } = new List<Avaliacao>();
     }
 }
